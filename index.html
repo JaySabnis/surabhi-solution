@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surabhi Solutions - Custom IT Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon_io/android-chrome-512x512.png">
+    <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon">
+
+
+
     <style>
         /* Import Montserrat font for a clean, professional look */
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -116,16 +127,29 @@
             z-index: 1000;
         }
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
+    .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0; /* top & bottom padding */
+    position: relative;
+}
 
         .logo {
-            display: flex;
-            align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    padding: 0 15px;  /* left & right padding */
+}
+
+        .logo-img {
+            height: 50px;
+            /* adjust logo size */
+            width: auto;
+            /* keeps proportions */
         }
 
         /* Header Logo Styling */
@@ -158,6 +182,12 @@
             font-size: 0.9rem;
             margin-top: 5px;
         }
+
+
+       .nav-wrapper {
+    margin-left: auto;
+    padding: 0 15px; /* right padding */
+}
 
 
 
@@ -533,24 +563,29 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container header-container">
+        <div class="header-container">
             <div class="logo">
+                <img src="assets/surabhi-solutions-logo-cropped.png" alt="Surabhi Solutions Logo" class="logo-img">
                 <h1>
                     <span class="logo-primary">Surabhi</span>
                     <span class="logo-accent">Solutions</span>
                 </h1>
             </div>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
+
+            <div class="nav-wrapper">
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </div>
     </header>
+
 
 
     <!-- Hero Section -->
@@ -618,11 +653,13 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Your Trusted IT Partner</h3>
-                    <p style="text-align: justify;">At Surabhi Solutions, we are a small, dedicated software development team specializing in
+                    <p style="text-align: justify;">At Surabhi Solutions, we are a small, dedicated software development
+                        team specializing in
                         tailored solutions for SMEs. Led by a founder with 20+ years of experience working with
                         corporates, SMEs, and international clients in the US and UK, we bring both depth and a global
                         perspective to our work.</p>
-                    <p style="text-align: justify;">We pride ourselves on a collaborative approach, taking time to understand your goals and
+                    <p style="text-align: justify;">We pride ourselves on a collaborative approach, taking time to
+                        understand your goals and
                         delivering practical, scalable solutions that support long-term growth. From building new
                         products to optimizing existing systems, we combine creativity and reliability to help turn your
                         ideas into reality.</p>
